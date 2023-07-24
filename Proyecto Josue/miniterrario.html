@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galería de imágenes</title>
+  <link rel="stylesheet" type="text/css" href="css/imagenes.css">
+</head>
+<body>
+	<header class="inicial">
+			<nav>
+				<ul class="links">
+					<li><a href="index.html">Inicio</a></li>
+				</ul>
+			</nav>
+	</header>
+
+  <div class="container">
+    <h1>Galería de imágenes</h1>
+    <div class="image-gallery">
+      <img src="img2/1.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/1.jpeg')">
+      <img src="img2/2.jpeg" alt="Imagen 2" class="gallery-image" onclick="showImage('img2/2.jpeg')">
+      <img src="img2/3.jpeg" alt="Imagen 3" class="gallery-image" onclick="showImage('img2/3.jpeg')">
+      <img src="img2/4.jpeg" alt="Imagen 4" class="gallery-image" onclick="showImage('img2/4.jpeg')">
+      <img src="img2/5.jpeg" alt="Imagen 5" class="gallery-image" onclick="showImage('img2/5.jpeg')">
+      <img src="img2/6.jpeg" alt="Imagen 6" class="gallery-image" onclick="showImage('img2/6.jpeg')">
+      <img src="img2/7.jpeg" alt="Imagen 7" class="gallery-image" onclick="showImage('img2/7.jpeg')">
+      <img src="img2/8.jpeg" alt="Imagen 8" class="gallery-image" onclick="showImage('img2/8.jpeg')">
+      <img src="img2/9.jpeg" alt="Imagen 9" class="gallery-image" onclick="showImage('img2/9.jpeg')">
+      <img src="img2/10.jpeg" alt="Imagen 10" class="gallery-image" onclick="showImage('img2/10.jpeg')">
+      <img src="img2/11.jpeg" alt="Imagen 11" class="gallery-image" onclick="showImage('img2/11.jpeg')">
+      <img src="img2/12.jpeg" alt="Imagen 12" class="gallery-image" onclick="showImage('img2/12.jpeg')">
+      <img src="img2/13.jpeg" alt="Imagen 13" class="gallery-image" onclick="showImage('img2/13.jpeg')">
+      <img src="img2/14.jpeg" alt="Imagen 14" class="gallery-image" onclick="showImage('img2/14.jpeg')">
+      <!-- Continúa agregando los elementos <img> para el resto de las imágenes -->
+    </div>
+    <div id="overlay" onclick="hideImage()">
+      <img src="" alt="Imagen" id="overlay-image">
+      <button id="close-btn" onclick="hideImage()">Cerrar</button>
+    </div>
+  </div>
+
+  <div class="proceso">
+      <h1>Pasos para crear papel reciclado </h1>
+      <div class="pasos">  
+          <div class="texto">
+              <h2>Paso 1</h2>
+              <p> Cortar papel en pedacitos y luego añadirlos en agua para que bote la tinta de las hojas</p>
+          </div>    
+          <div class="contenedorimg">
+            <img src="img2/paso1.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso1.jpeg')">
+          </div>
+
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+
+      <div class="pasos">
+          <div class="texto">
+              <h2>Paso 2</h2>
+              <p> Si quieres agregarle un color al papel reciclado puedes añadirle un pedazo de página de color el de tu preferencia</p>
+          </div>
+          <div class="contenedorimg">
+            <img src="img2/paso2.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso2.jpeg')">
+          </div>
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+
+      <div class="pasos">
+          <div class="texto">
+              <h2>Paso 3</h2>
+              <p> Poner todo el papel cortado en la licuadora con suficiente agua</p>
+          </div>
+
+          <div class="contenedorimg">
+            <img src="img2/paso3.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso3.jpeg')">
+            <img src="img2/pase3.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/pase3.jpeg')">
+          </div>
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+
+
+      <div class="pasos">
+          <div class="texto">
+              <h2>Paso 4</h2>
+              <p> Luego añade la mezcla  en un bastidor de madera</p>
+          </div>
+
+          <div class="contenedorimg">
+            <img src="img2/paso4.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso4.jpeg')">
+          </div>
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+
+      <div class="pasos">
+          <div class="texto">
+              <h2>Paso 5</h2>
+              <p> Pon un pedazo de tela encima del bastidor y deja que bote la mayoría del exceso de agua</p>
+          </div>
+
+          <div class="contenedorimg">
+            <img src="img2/paso5.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso5.jpeg')">
+          </div>
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+
+      <div class="pasos">
+          <div class="texto">
+              <h2>Paso 6</h2>
+              <p> Luego déjalo secar en la tela</p>
+          </div>
+
+          <div class="contenedorimg">
+            <img src="img2/paso6.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso6.jpeg')">
+          </div> 
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+
+      <div class="pasos">
+          <div class="texto">
+              <h2>Paso 7</h2>
+              <p> Y listo así obtienes un papel 100% orgánico, </p>
+          </div>
+
+          <div class="contenedorimg">
+            <img src="img2/paso7.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/paso7.jpeg')">
+            <img src="img2/pase7.jpeg" alt="Imagen 1" class="gallery-image" onclick="showImage('img2/pase7.jpeg')">
+          </div>
+          <div id="overlay" onclick="hideImage()">
+            <img src="" alt="Imagen" id="overlay-image">
+            <button id="close-btn" onclick="hideImage()">Cerrar</button>
+          </div>
+      </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
