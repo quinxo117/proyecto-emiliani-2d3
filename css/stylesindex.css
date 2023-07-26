@@ -1,0 +1,1200 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "PTSans-Regular", sans-serif;
+}
+
+/* Contenedor padre de HEADER, SECTION Y FOOTER */
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 1024px) {
+  /* Estilos específicos para pantallas de escritorio */
+  /* ... */
+
+
+.containergral {
+  width: 100%;
+  height: 100vh; /* 100% del viewport height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+
+.containergral body {
+	background-color: #72A98F;
+	margin-right: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column; 
+	font-family: "PTSans-Regular", sans-serif;
+	width: 100%;
+	max-width: 1200px;
+	color: #424242;
+
+
+}
+
+
+
+/* HEADER LOGO MENU  */
+.inicial {
+	width: 100%;
+	padding: 0px 0px ;
+	/*order: 1;*/
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;	
+	background-color: #558C5A;
+
+
+}
+
+/* UL DE LOS BOTONES */
+
+.inicial nav{
+	height: 70px;
+}
+
+
+.inicial nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+
+.inicial nav ul > li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 5px;
+    padding: 1px 1px;
+}
+
+
+
+
+.inicial nav .links li a{
+	color: #fff;
+	text-decoration: none;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	padding: 25px 15px;
+}
+
+.inicial nav .links li a:hover{
+	text-decoration: none;
+	color: #558C5A;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 25px 15px;
+	background-color: #f2f0e1;
+
+}
+
+
+/* CONTENEDOR PADRE DE IZQ, SECTION y DERECHA --------------*/
+
+section{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #f2f0e1;
+	width: 100%;
+	margin-right: 0px;
+	padding: 0;
+}
+
+/* CONTENEDOR MEDIO Header ---------------------*/
+section header {
+	padding: 1px 1px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+/* Contenedor img */
+section header .logo{
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+
+}
+
+
+section header .logo img{
+	width: 45%;
+	padding: 5px 5px;
+}
+
+
+section header h1 {
+	font-weight:normal;
+	margin-bottom: 20px;
+	font-size: 50px;
+	font-family: "PTSans-Black", sans-serif;
+	font-style: italic;
+	text-align: center;
+	align-self:center;
+
+
+} 
+
+/* MEDIO Article -------------------*/
+section article {
+	width: 80%;
+	order:2;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+}
+
+section article header{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	width: 100%;
+}
+section article header h1{
+	font-weight:normal;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-style: italic;
+	font-family: "PTSans-Black", sans-serif;
+}
+
+
+/* /*CONTENEDOR DE LA IMAGEN DEL BIOMA
+section article .contenedorimg {
+	width: 80%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+section article .contenedorimg a{
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+/* IMAGEN BIOMA
+section article .contenedorimg img {
+    padding: 5px;
+    border: 1px solid #3D5A6C;
+    opacity: 0.8;
+    width: 100%;
+}
+section article .contenedorimg img:hover {
+    padding: 5px;
+    border: 1px solid #444;
+    opacity: 1;
+} */
+
+/*CONTENEDOR DE LA IMAGEN*/
+section article .contenedorimg {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: 5px 5px;
+}
+
+/*---------------------IMAGEN*/
+section article .contenedorimg img {
+  vertical-align: top;
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  border: 1px solid #3D5A6C;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.gallery-image:hover {
+    border: 1px solid #444;
+    opacity: 1;
+}
+
+
+/*AQUI VA LA MAGIA DEL JAVASCRIPT*/
+/* MAGIA DEL JAVASCRIPT */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  margin-bottom: 20px;
+}
+
+#close-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+/*AQUI CIERRA LA MAGIA*/
+
+section article p{
+	padding: 20px 0 20px 0;
+	/*background-color: #f1f1f1;*/
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-align: justify;
+	line-height: 27px;
+	letter-spacing: 0.5px;
+	color: #081501;
+
+	
+}
+
+/* BLOQUE IZQ ---------------------- */
+.izquierda {
+	width: 10%;
+	order:1;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+}
+
+.izquierda nav {
+	width: 100%;
+	margin: 20px 0;
+
+}
+
+.izquierda nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 50px 0;
+    padding: 0;
+    background-color: #f2f0e1; 
+}
+
+.izquierda nav ul > li {
+    list-style-type: none;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: 100%;
+    border-bottom: 5px solid #f2f0e1;
+    display: block;
+}
+
+
+
+.izquierda nav .biomas li a:hover{
+	display: block;
+	margin: 0;
+	padding: 15px 20px;
+	color: #f2f0e1;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	background-color: #444;
+	font-family: "PTSans-BoldItalic", sans-serif;
+	text-align: center;
+
+}
+
+.izquierda nav .biomas li a{
+	display: block;
+	margin: 0;
+	padding: 15px 20px;
+	color: #081501;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	transition: background-color 0.3s;
+	font-family: "PTSans-BoldItalic", sans-serif;
+	text-align: center;
+}
+
+
+
+/* BLOQUE DERECHA -----------------------*/
+.derecha {
+	width: 7%;
+	order:3;
+	display: flex;
+	align-items:flex-start;
+	justify-content:center;
+
+}
+
+.derecha p {
+	font-size: 35px;
+	text-align: justify;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	padding: 10px 2px;
+	font-family: "PTSans-Black", sans-serif;
+
+}
+
+/* FOOTER  */
+
+
+footer{
+	display: flex;
+	/*order:3;*/
+	background-color: #3D5A6C;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+
+}
+
+
+footer p {
+text-align: center;
+color: #FFF;
+margin: 7px 0;
+font-family: "PTSans-Italic", sans-serif;
+}
+
+.contenedorlinks{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+.contenedorlinks a {
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+	padding: 15px 0;
+	border-radius: 5px;
+	font-size: 30px;
+	margin: 0 10px;
+}
+
+.contenedorlinks .twitter:hover {background: #1da1f2; border-radius: 5px; border: 1px solid #fff;}
+.contenedorlinks .threads:hover {background: #3f729b; border-radius: 5px; border: 1px solid #fff;}
+
+
+.contenedorlinks a img {
+	width: 30%;
+
+}
+
+}
+
+
+
+
+/* Estilos base para todos los tamaños de pantalla */
+/* ... */
+
+/* Media query para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos específicos para tabletas */
+  /* ... */
+
+
+.containergral {
+  width: 100%;
+  height: 100%; /* 100% del viewport height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+
+.containergral body {
+	background-color: #72A98F;
+	margin-right: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column; 
+	font-family: "PTSans-Regular", sans-serif;
+	width: 100%;
+	max-width: 1200px;
+	color: #424242;
+}
+
+/* HEADER LOGO MENU  */
+.inicial {
+	width: 100%;
+	padding: 0px 0px ;
+	/*order: 1;*/
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;	
+	background-color: #558C5A;
+}
+
+
+
+/* UL DE LOS BOTONES */
+
+.inicial nav{
+	height: 70px;
+}
+
+
+.inicial nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+
+.inicial nav ul > li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 5px;
+    padding: 1px 1px;
+}
+
+
+
+
+.inicial nav .links li a{
+	color: #fff;
+	text-decoration: none;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	padding: 25px 15px;
+}
+
+.inicial nav .links li a:hover{
+	text-decoration: none;
+	color: #558C5A;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 25px 15px;
+	background-color: #f2f0e1;
+
+}
+
+
+/* CONTENEDOR PADRE DE IZQ, SECTION y DERECHA --------------*/
+
+section{
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f0e1;
+	width: 100%;
+	margin-right: 0px;
+	padding: 0;
+}
+
+/* CONTENEDOR MEDIO Header ---------------------*/
+section header {
+	padding: 1px 1px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+/* Contenedor img */
+section header .logo{
+	width: 100%;
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+
+}
+
+
+section header .logo img{
+	width: 10%;
+	padding: 5px 5px;
+}
+
+
+section header h1 {
+	font-weight:normal;
+	margin-bottom: 20px;
+	font-size: 40px;
+	font-family: "PTSans-Black", sans-serif;
+	font-style: italic;
+	text-align: center;
+	align-self:center;
+
+
+} 
+
+/* MEDIO Article -------------------*/
+section article {
+	width: 99%;
+	order:2;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+	margin: 0px auto;
+}
+
+section article header{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	width: 100%;
+}
+section article header h1{
+	font-weight:normal;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-style: italic;
+	font-family: "PTSans-Black", sans-serif;
+}
+
+
+/*CONTENEDOR DE LA IMAGEN*/
+section article .contenedorimg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/*---------------------IMAGEN*/
+section article .contenedorimg img {
+  vertical-align: top;
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  border: 1px solid #3D5A6C;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.gallery-image:hover {
+    border: 1px solid #444;
+    opacity: 1;
+}
+
+
+/*AQUI VA LA MAGIA DEL JAVASCRIPT*/
+/* MAGIA DEL JAVASCRIPT */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  margin-bottom: 20px;
+}
+
+#close-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+/*AQUI CIERRA LA MAGIA*/
+
+
+
+section article p{
+	padding: 20px 0 20px 0;
+	/*background-color: #f1f1f1;*/
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-align: justify;
+	line-height: 27px;
+	letter-spacing: 0.5px;
+	color: #081501;
+
+	
+}
+
+/* BLOQUE IZQ ---------------------- */
+.izquierda {
+	width: 100%;
+	order:1;
+	display: flex;
+	flex-direction: row;
+}
+
+.izquierda nav {
+	width: 100%;
+	margin: 0px 0px;
+}
+
+.izquierda nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0;
+    background-color: #f2f0e1; 
+}
+
+.izquierda nav ul > li {
+    list-style-type: none;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: auto;
+    border-bottom: 5px solid #f2f0e1;
+    border-top: 5px solid #f2f0e1;
+    display: inline-block;
+}
+
+.izquierda nav .biomas li a{
+	display: inline-block;
+	margin: 0;
+	padding: 10px 15px;
+	color: #081501;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	font-family: "PTSans-BoldItalic", sans-serif;
+}
+
+
+.izquierda nav .biomas li a:hover{
+	display: inline-block;
+	margin: 0;
+	padding: 10px 15px;
+	color: #f2f0e1;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #444;
+	font-family: "PTSans-BoldItalic", sans-serif;
+
+}
+
+
+/* BLOQUE DERECHA -----------------------*/
+.derecha {
+	width: 100%;
+	order:3;
+	display: flex;
+	align-items:flex-start;
+	justify-content:center;
+
+}
+
+.derecha p {
+	font-size: 35px;
+	text-align: justify;
+	writing-mode: horizontal-tb;
+	text-orientation: initial;
+	padding: 10px 2px;
+	font-family: "PTSans-Black", sans-serif;
+
+}
+
+/* FOOTER  */
+
+
+footer{
+	display: flex;
+	/*order:3;*/
+	background-color: #3D5A6C;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+
+}
+
+
+footer p {
+text-align: center;
+color: #FFF;
+margin: 7px 0;
+font-family: "PTSans-Italic", sans-serif;
+}
+
+.contenedorlinks{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+.contenedorlinks a {
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+	padding: 15px 0;
+	border-radius: 5px;
+	font-size: 30px;
+	margin: 0 10px;
+}
+
+.contenedorlinks .twitter:hover {background: #1da1f2; border-radius: 5px; border: 1px solid #fff;}
+.contenedorlinks .threads:hover {background: #3f729b; border-radius: 5px; border: 1px solid #fff;}
+
+
+
+.contenedorlinks a img {
+	width: 30%;
+
+}
+}
+
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  /* Estilos específicos para dispositivos móviles */
+  /* ... */
+
+
+.containergral {
+  width: 100%;
+  height: 100%; /* 100% del viewport height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+
+.containergral body {
+	background-color: #72A98F;
+	margin-right: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column; 
+	font-family: "PTSans-Regular", sans-serif;
+	width: 100%;
+	max-width: 1200px;
+	color: #424242;
+}
+
+/* HEADER LOGO MENU  */
+.inicial {
+	width: 100%;
+	padding: 0px 0px ;
+	/*order: 1;*/
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;	
+	background-color: #558C5A;
+}
+
+
+
+/* UL DE LOS BOTONES */
+
+.inicial nav{
+	height: 70px;
+}
+
+
+.inicial nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+}
+
+.inicial nav ul > li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 5px;
+    padding: 1px 1px;
+}
+
+
+
+
+.inicial nav .links li a{
+	color: #fff;
+	text-decoration: none;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	padding: 25px 15px;
+}
+
+.inicial nav .links li a:hover{
+	text-decoration: none;
+	color: #558C5A;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 25px 15px;
+	background-color: #f2f0e1;
+
+}
+
+
+/* CONTENEDOR PADRE DE IZQ, SECTION y DERECHA --------------*/
+
+section{
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f0e1;
+	width: 100%;
+	margin-right: 0px;
+	padding: 0;
+}
+
+/* CONTENEDOR MEDIO Header ---------------------*/
+section header {
+	padding: 1px 1px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+/* Contenedor img */
+section header .logo{
+	width: 100%;
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+
+}
+
+
+section header .logo img{
+	width: 20%;
+	padding: 5px 5px;
+}
+
+
+section header h1 {
+	font-weight:normal;
+	margin-bottom: 20px;
+	font-size: 25px;
+	font-family: "PTSans-Black", sans-serif;
+	font-style: italic;
+	text-align: center;
+	align-self:center;
+
+
+} 
+
+/* MEDIO Article -------------------*/
+section article {
+	width: 99%;
+	order:2;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+	margin: 0px auto;
+}
+
+section article header{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	width: 100%;
+}
+section article header h1{
+	font-weight:normal;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-style: italic;
+	font-family: "PTSans-Black", sans-serif;
+}
+
+
+/*CONTENEDOR DE LA IMAGEN*/
+section article .contenedorimg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/*---------------------IMAGEN*/
+section article .contenedorimg img {
+  vertical-align: top;
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  border: 1px solid #3D5A6C;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.gallery-image:hover {
+    border: 1px solid #444;
+    opacity: 1;
+}
+
+
+/*AQUI VA LA MAGIA DEL JAVASCRIPT*/
+/* MAGIA DEL JAVASCRIPT */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  margin-bottom: 20px;
+}
+
+#close-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+/*AQUI CIERRA LA MAGIA*/
+
+
+section article p{
+	padding: 20px 0 20px 0;
+	/*background-color: #f1f1f1;*/
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-align: justify;
+	line-height: 27px;
+	letter-spacing: 0.5px;
+	color: #081501;
+
+	
+}
+
+/* BLOQUE IZQ ---------------------- */
+.izquierda {
+	width: 100%;
+	order:1;
+	display: flex;
+	flex-direction: row;
+}
+
+.izquierda nav {
+	width: 100%;
+	margin: 0px 0px;
+}
+
+.izquierda nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0;
+    background-color: #f2f0e1; 
+}
+
+.izquierda nav ul > li {
+    list-style-type: none;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width: auto;
+    border-bottom: 5px solid #f2f0e1;
+    border-top: 5px solid #f2f0e1;
+    display: inline-block;
+}
+
+.izquierda nav .biomas li a{
+	display: inline-block;
+	margin: 0;
+	padding: 10px 15px;
+	color: #081501;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	font-family: "PTSans-BoldItalic", sans-serif;
+}
+
+
+.izquierda nav .biomas li a:hover{
+	display: inline-block;
+	margin: 0;
+	padding: 10px 15px;
+	color: #f2f0e1;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #444;
+	font-family: "PTSans-BoldItalic", sans-serif;
+
+}
+
+
+/* BLOQUE DERECHA -----------------------*/
+.derecha {
+	width: 100%;
+	order:3;
+	display: flex;
+	align-items:flex-start;
+	justify-content:center;
+
+}
+
+.derecha p {
+	font-size: 35px;
+	text-align: justify;
+	writing-mode: horizontal-tb;
+	text-orientation: initial;
+	padding: 10px 2px;
+	font-family: "PTSans-Black", sans-serif;
+
+}
+
+/* FOOTER  */
+
+
+footer{
+	display: flex;
+	/*order:3;*/
+	background-color: #3D5A6C;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+
+}
+
+
+footer p {
+text-align: center;
+color: #FFF;
+margin: 7px 0;
+font-family: "PTSans-Italic", sans-serif;
+}
+
+.contenedorlinks{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+.contenedorlinks a {
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+	padding: 15px 0;
+	border-radius: 5px;
+	border: 1px solid #3D5A6C;
+	font-size: 30px;
+	margin: 0 10px;
+}
+
+.contenedorlinks .twitter:hover {background: #1da1f2; border-radius: 5px; border: 1px solid #fff;}
+.contenedorlinks .threads:hover {background: #3f729b; border-radius: 5px; border: 1px solid #fff;}
+
+
+
+.contenedorlinks a img {
+	width: 30%;
+
+}
+
+}
+
+
+@font-face {
+	font-family:PTSans-Bold;
+	src: url('fonts/PTSans-Bold.ttf');
+}
+@font-face {
+	font-family:PTSans-BoldItalic;
+	src: url('fonts/PTSans-BoldItalic.ttf');
+}
+@font-face {
+	font-family:PTSans-Italic;
+	src: url('fonts/PTSans-Italic.ttf');
+}
+@font-face {
+	font-family:PTSans-Regular;
+	src: url('fonts/PTSans-Regular.ttf');
+}
+

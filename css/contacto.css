@@ -1,0 +1,922 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "PTSans-Regular", "ComicNeue-Regular", sans-serif;
+}
+
+body{
+	/*background-color: azul marino #3D5A6C; verde esmeralda 72A98F Blanco huezo f2f0e1*/
+	background-color: #f2f0e1;
+	color: #3D5A6C;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/* BARRA DE NAVEGACION */
+body .inicial nav{
+	height: 70px;
+	background-color: #f2f0e1;
+	width: 100%;
+}
+
+body .inicial nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70px;
+}
+
+body .inicial nav ul > li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px;
+    padding: 1px 1px;
+}
+
+body .inicial nav .links li a{
+	color: #3D5A6C;
+	text-decoration: none;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	padding: 25px 15px;
+}
+
+body .inicial nav .links li a:hover{
+	text-decoration: none;
+	color: #FFF;
+	margin: 0px 0px;
+	font-size: 14px;
+	font-family: "PTSans-Bold", sans-serif;
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 25px 15px;
+	background-color: #3D5A6C;
+
+
+}
+
+/* CONTENEDOR PADRE DE AMBOS LADOS */
+
+section {
+	width: 97%;
+	border: 1px solid #CCC;
+	display: flex;
+	flex-direction: row;
+	border-radius: 20px;
+
+}
+
+
+/* LADO IZQUIERDO */
+/*CONTENEDOR PADRE IZQ*/
+section article {
+	width: 30%;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-start;
+  	align-items: flex-start;
+  	margin: 2px 2px;
+  	border: 1px solid #CCC;
+  	background-color: #3D5A6C;
+  	color: #f2f0e1;
+  	border-radius: 20px;
+
+}
+
+
+/*--------------------CONTENEDOR DE LA IMAGEN*/
+section article .contenedorimg {
+  margin: 25px auto 0px auto;
+  width: 200px; /* Ajusta el tamaño deseado */
+  height: 200px; /* Ajusta el tamaño deseado */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*---------------------IMAGEN*/
+section article .contenedorimg img {
+  vertical-align: top;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*La imagen se ajustará al 100% del contenedor utilizando object-fit: cover, lo que garantiza que ocupe todo el espacio sin deformar la relación de aspecto. El borde redondeado se aplica al contenedor <div>.*/
+}
+
+section article .contenedorimg img:hover {
+    opacity: 1;
+}
+
+section article h1 {
+	margin: 1px auto 0px auto;
+	font-size: 20px;
+
+}
+
+section article small {
+	margin: 0px auto 0px auto;
+	font-size: medium;
+	display: block;
+	width: 200px; /* Ajusta el tamaño deseado */
+    height: auto; /* Ajusta el tamaño deseado */
+
+}
+
+section article .contenedorhab {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	align-items: center;
+  	width: 100%;
+
+}
+
+section article .blandas {
+	margin: 1px auto 0px auto;
+	width: 200px;
+
+}
+
+section article .blandas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 17px;
+
+}
+
+section article .blandas p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+section article .tecnicas {
+	margin: 1px auto 0px auto;
+	width: 200px;
+
+}
+
+
+section article .tecnicas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 17px;
+
+}
+
+section article .tecnicas p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+section article .idiomas {
+	margin: 1px auto 0px auto;
+	width: 200px;
+}
+
+
+section article .idiomas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 17px;
+
+}
+
+section article .idiomas p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+section article .pasatiempos {
+	margin: 1px auto 0px auto;
+	width: 200px;
+}
+
+
+section article .pasatiempos h2 {
+	margin: 15px auto 0px auto;
+	font-size: 17px;
+
+}
+
+section article .pasatiempos p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+
+/* LADO DERECHO */
+
+/*CONTENEDOR PADRE DERECHA*/
+section aside {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 2px 2px;
+	border: 1px solid #CCC;
+	border-radius: 20px;
+}
+
+section aside h1 {
+	font-size: 50px;
+	margin: 15px auto 0px 20px;
+
+}
+
+section aside small{
+	margin: 0px auto 0px 20px;
+}
+
+
+section aside h2 {
+	margin: 15px auto 0px 5px;
+	font-size: 25px;
+	display: block;
+	width: 99%; /* Ajusta el tamaño deseado */
+	color: #f2f0e1;
+	background-color: #3D5A6C;
+	border-radius: 10px;
+}
+
+section aside .direccion {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .direccion img {
+	max-width: 25px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .direccion p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside .phone {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .phone img {
+	max-width: 22px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .phone p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside .correo {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .correo img {
+	max-width: 25px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .correo p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside h3 {
+	font-size: 20px;
+	margin: 13px auto 0px 5px;
+}
+
+section aside sub {
+	margin: 0px auto 0px 5px;
+}
+
+section aside p {
+	text-align: justify;
+	letter-spacing:0.2px;
+	line-height: 25px;
+	margin: 0px auto 0px 5px;
+	font-size: 18px;
+}
+
+
+/* CONTENEDOR PADRE DEL FOOTER */
+
+footer {
+
+}
+
+
+footer .contenedorlinks {
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+footer .contenedorlinks a {
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+	padding: 15px 0;
+	border-radius: 5px;
+	font-size: 30px;
+	margin: 0 10px;
+	border: 1px solid #f2f0e1;
+}
+
+footer .contenedorlinks a img{
+	width: 30%;
+}
+
+footer .contenedorlinks .twitter:hover {background: #1da1f2; border-radius: 5px; border: 1px solid #fff;}
+footer .contenedorlinks .threads:hover {background: #3f729b; border-radius: 5px; border: 1px solid #fff;}
+footer .contenedorlinks .linkedin:hover {background: #0077B5; border-radius: 5px; border: 1px solid #fff;}
+
+@media (min-width: 580px) and (max-width: 766px) {
+		/* CONTENEDOR PADRE DE AMBOS LADOS */
+
+section {
+	width: 98%;
+	border: 1px solid #CCC;
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+
+}
+
+
+/* -----------------------------------LADO ARRIBA */
+/*CONTENEDOR PADRE ARRIBA*/
+section article {
+	width: 100%;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-start;
+  	align-items: flex-start;
+  	flex-wrap: no-wrap;
+  	margin: 2px 2px;
+  	border: 1px solid #CCC;
+  	background-color: #3D5A6C;
+  	color: #f2f0e1;
+  	border-radius: 20px;
+
+}
+
+
+/*--------------------CONTENEDOR DE LA IMAGEN*/
+section article .contenedorimg {
+  margin: 25px auto 0px auto;
+  width: 200px; /* Ajusta el tamaño deseado */
+  height: 200px; /* Ajusta el tamaño deseado */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*---------------------IMAGEN*/
+section article .contenedorimg img {
+  vertical-align: top;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*La imagen se ajustará al 100% del contenedor utilizando object-fit: cover, lo que garantiza que ocupe todo el espacio sin deformar la relación de aspecto. El borde redondeado se aplica al contenedor <div>.*/
+}
+
+section article .contenedorimg img:hover {
+    opacity: 1;
+}
+
+/*INFORMACION*/
+section article h1 {
+	margin: 1px auto 0px auto;
+	font-size: 17px;
+
+}
+
+section article small {
+	margin: 0px auto 0px auto;
+	font-size: medium;
+	display: block;
+	width: 95%; /* Ajusta el tamaño deseado */
+    height: auto; /* Ajusta el tamaño deseado */
+
+}
+
+section article .contenedorhab {
+  	display: flex; /* Utilizamos Flexbox para alinear los divs */
+  	flex-wrap: wrap; /* Permite que los divs se ajusten en varias líneas */
+  	justify-content: space-between; /* Distribuye los divs horizontalmente con espacios entre ellos */
+	flex-direction: row;
+	width: 100%;
+}
+
+/* HABILIDADES BLANDAS*/
+section article .blandas {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+section article .blandas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 16px;
+
+}
+
+section article .blandas p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+/* HABILIDADES TECNICAS*/
+section article .tecnicas {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+    display: flex;
+    flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+
+}
+
+
+section article .tecnicas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 16px;
+
+}
+
+section article .tecnicas p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+/* IDIOMAS*/
+section article .idiomas {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+section article .idiomas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 16px;
+
+}
+
+section article .idiomas p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+/* PASATIEMPOS*/
+section article .pasatiempos {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+
+
+}
+
+
+section article .pasatiempos h2 {
+	margin: 15px auto 0px auto;
+	font-size: 16px;
+
+}
+
+section article .pasatiempos p {
+	margin: 1px auto 5px auto;
+	font-size: 15px;
+
+}
+
+
+/* ----------------- LADO ABAJO */
+
+/*CONTENEDOR PADRE ABAJO*/
+section aside {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 2px 2px;
+	border: 1px solid #CCC;
+	border-radius: 20px;
+}
+
+section aside h1 {
+	font-size: 50px;
+	margin: 15px auto 0px auto;
+
+}
+
+section aside small{
+	margin: 0px auto 0px auto;
+}
+
+
+section aside h2 {
+	margin: 15px auto 0px auto;
+	font-size: 23px;
+	display: block;
+	width: 98%; /* Ajusta el tamaño deseado */
+	color: #f2f0e1;
+	background-color: #3D5A6C;
+	border-radius: 10px;
+}
+
+section aside .direccion {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .direccion img {
+	max-width: 25px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .direccion p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+	font-size: 16px;
+}
+
+section aside .phone {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .phone img {
+	max-width: 22px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .phone p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside .correo {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .correo img {
+	max-width: 25px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .correo p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside h3 {
+	font-size: 17px;
+	margin: 13px auto 0px 5px;
+}
+
+section aside sub {
+	margin: 0px auto 0px 5px;
+	font-size: 12px;
+}
+
+section aside p {
+	text-align: justify;
+	letter-spacing: -0.8px;
+	line-height: 17px;
+	margin: 0px 10px 0px 5px;
+	font-size: 16px;
+}
+
+
+}
+
+@media (max-width: 579px) {
+
+	/* CONTENEDOR PADRE DE AMBOS LADOS */
+
+section {
+	width: 98%;
+	border: 1px solid #CCC;
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+
+}
+
+
+/* -----------------------------------LADO ARRIBA */
+/*CONTENEDOR PADRE ARRIBA*/
+section article {
+	width: 100%;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: flex-start;
+  	align-items: flex-start;
+  	flex-wrap: no-wrap;
+  	margin: 2px 2px;
+  	border: 1px solid #CCC;
+  	background-color: #3D5A6C;
+  	color: #f2f0e1;
+  	border-radius: 20px;
+
+}
+
+
+/*--------------------CONTENEDOR DE LA IMAGEN*/
+section article .contenedorimg {
+  margin: 25px auto 0px auto;
+  width: 200px; /* Ajusta el tamaño deseado */
+  height: 200px; /* Ajusta el tamaño deseado */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/*---------------------IMAGEN*/
+section article .contenedorimg img {
+  vertical-align: top;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*La imagen se ajustará al 100% del contenedor utilizando object-fit: cover, lo que garantiza que ocupe todo el espacio sin deformar la relación de aspecto. El borde redondeado se aplica al contenedor <div>.*/
+}
+
+section article .contenedorimg img:hover {
+    opacity: 1;
+}
+
+/*INFORMACION*/
+section article h1 {
+	margin: 1px auto 0px auto;
+	font-size: 17px;
+
+}
+
+section article small {
+	margin: 0px auto 0px auto;
+	font-size: medium;
+	display: block;
+	width: 95%; /* Ajusta el tamaño deseado */
+    height: auto; /* Ajusta el tamaño deseado */
+
+}
+
+section article .contenedorhab {
+  	display: flex; /* Utilizamos Flexbox para alinear los divs */
+  	flex-wrap: wrap; /* Permite que los divs se ajusten en varias líneas */
+  	justify-content: space-between; /* Distribuye los divs horizontalmente con espacios entre ellos */
+	flex-direction: row;
+	width: 100%;
+}
+
+/* HABILIDADES BLANDAS*/
+section article .blandas {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+section article .blandas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 13px;
+
+}
+
+section article .blandas p {
+	margin: 1px auto 5px auto;
+	font-size: 12px;
+
+}
+
+/* HABILIDADES TECNICAS*/
+section article .tecnicas {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+    display: flex;
+    flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+
+}
+
+
+section article .tecnicas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 13px;
+
+}
+
+section article .tecnicas p {
+	margin: 1px auto 5px auto;
+	font-size: 12px;
+
+}
+
+/* IDIOMAS*/
+section article .idiomas {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+section article .idiomas h2 {
+	margin: 15px auto 0px auto;
+	font-size: 13px;
+
+}
+
+section article .idiomas p {
+	margin: 1px auto 5px auto;
+	font-size: 12px;
+
+}
+
+/* PASATIEMPOS*/
+section article .pasatiempos {
+	margin: 2px 0px 2px 0px;
+	width: 49%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+
+
+}
+
+
+section article .pasatiempos h2 {
+	margin: 15px auto 0px auto;
+	font-size: 13px;
+
+}
+
+section article .pasatiempos p {
+	margin: 1px auto 5px auto;
+	font-size: 12px;
+
+}
+
+
+/* ----------------- LADO ABAJO */
+
+/*CONTENEDOR PADRE ABAJO*/
+section aside {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 2px 2px;
+	border: 1px solid #CCC;
+	border-radius: 20px;
+}
+
+section aside h1 {
+	font-size: 40px;
+	margin: 15px auto 0px auto;
+
+}
+
+section aside small{
+	margin: 0px auto 0px auto;
+}
+
+
+section aside h2 {
+	margin: 15px auto 0px auto;
+	font-size: 21px;
+	display: block;
+	width: 98%; /* Ajusta el tamaño deseado */
+	color: #f2f0e1;
+	background-color: #3D5A6C;
+	border-radius: 10px;
+}
+
+section aside .direccion {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .direccion img {
+	max-width: 25px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .direccion p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+	font-size: 14px;
+}
+
+section aside .phone {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .phone img {
+	max-width: 22px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .phone p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside .correo {
+	display: flex; /* Utilizamos Flexbox para alinear los elementos horizontalmente */
+  	align-items: center; /* Centra verticalmente los elementos */
+}
+
+section aside .correo img {
+	max-width: 25px; /* Ajusta el tamaño máximo de la imagen */
+  	margin: 0px 10px 0px 5px; /* Espacio entre la imagen y el texto */
+}
+
+section aside .correo p{
+	flex: 1; /* El texto ocupará todo el espacio restante en el contenedor */
+}
+
+section aside h3 {
+	font-size: 16px;
+	margin: 13px auto 0px 5px;
+}
+
+section aside sub {
+	margin: 0px auto 0px 5px;
+	font-size: 12px;
+}
+
+section aside p {
+	text-align: justify;
+	letter-spacing: -0.2px;
+	line-height: 17px;
+	margin: 0px 40px 0px 5px;
+	font-size: 14px;
+}
+
+
+/* CONTENEDOR PADRE DEL FOOTER */
+
+
+}
+
+@font-face {
+	font-family:PTSans-Bold;
+	src: url('fonts/PTSans-Bold.ttf');
+}
+@font-face {
+	font-family:PTSans-BoldItalic;
+	src: url('fonts/PTSans-BoldItalic.ttf');
+}
+@font-face {
+	font-family:PTSans-Italic;
+	src: url('fonts/PTSans-Italic.ttf');
+}
+@font-face {
+	font-family:PTSans-Regular;
+	src: url('fonts/PTSans-Regular.ttf');
+}
